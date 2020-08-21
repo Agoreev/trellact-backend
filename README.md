@@ -3,8 +3,8 @@
 
 To run:
 
-Specify the mongodb URI in env file
+Specify the mongodb URI in env file in `DB_URI`
 
-npm install
+`npm install`
 
-npm start
+`npm start`
