@@ -17,6 +17,12 @@ const typeDefs = gql`
     type DesksOrder {
         desksOrder: [ID]!
     }
+    type CardsOrder {
+        cardsOrder: [ID]!
+    }
+    type ItemsOrder {
+        itemsOrder: [ID]!
+    }
 
     type Query {
         desks: DesksWithOrder
@@ -41,9 +47,11 @@ const typeDefs = gql`
         addCard(input: CreateCardInput!): Card!
         updateCard(_id: ID!, input: UpdateCardInput!): Card!
         deleteCard(_id: ID!): Card!
+        updateCardsOrder(deskId: ID!, cardsOrder: [ID]!): CardsOrder!
         addItem(title: CreateItemInput!): Item!
         updateItem(_id: ID!, input: UpdateItemInput!): Item!
         deleteItem(_id: ID!): Item!
+        updateItemsOrder(cardId: ID!, itemsOrder: [ID]!): ItemsOrder!
     }
 
     input CreateDeskInput {
